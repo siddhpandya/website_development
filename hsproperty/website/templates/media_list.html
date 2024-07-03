@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media List</title>
+</head>
+<body>
+    <h1>Uploaded Media</h1>
+    <ul>
+        {% for item in media %}
+            <li>
+                Video: <a href="{{ item.video.url }}">{{ item.video.name }}</a><br>
+                PPT: <a href="{{ item.ppt.url }}">{{ item.ppt.name }}</a><br>
+                Location: ({{ item.latitude }}, {{ item.longitude }})<br>
+                Uploaded at: {{ item.uploaded_at }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
